@@ -3,4 +3,5 @@ test:
     script:
         - pip3 install -r requirements.txt
         - cd src
+        - cp appstore/settings/local.sample.env appstore/settings/local.env
         - python3 manage.py test
