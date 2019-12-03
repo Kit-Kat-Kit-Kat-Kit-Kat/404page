@@ -21,8 +21,8 @@ This project has the following basic apps:
 To set up a development environment quickly, first install Python 3. It
 comes with virtualenv built-in. So create a virtual env by:
 
-    1. `$ python3 -m venv appstore`
-    2. `$ . appstore/bin/activate`
+    1. $ python3 -m venv appstore
+    2. $ . appstore/bin/activate
 
 Install all dependencies:
 
@@ -30,6 +30,7 @@ Install all dependencies:
 
 Run migrations:
 
+	python manage.py makemigrations
     python manage.py migrate
 
 ### Detailed instructions
