@@ -21,3 +21,6 @@ def homePage(request):
 
 class AboutPage(generic.TemplateView):
     template_name = "about.html"
+    
+class handler404(generic.TemplateView):
+    template_name = "404.html"
