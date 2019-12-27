@@ -3,7 +3,7 @@ from django.shortcuts import render
 from apps.models import App, Tag
 from apps.views import findTags
 from apps.forms import SearchFilterForm
-
+from django.http import HttpResponseNotFound
 
 def homePage(request):
     new_releases = App.objects.all().filter(
@@ -22,7 +22,5 @@ def homePage(request):
 class AboutPage(generic.TemplateView):
     template_name = "about.html"
     
-def customhandler404(request, exception, template_name='404.html'):
-    response = render(request, template_name)
-    response.status_code = 404
-    return response
+def test(request):
+    return HttpResponseNotFound(404.html)
